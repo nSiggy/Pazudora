@@ -1,3 +1,5 @@
 // @flow
 
-export {default} from './src/routes';
+import App from './src/App';
+
+export default App;

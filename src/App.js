@@ -1,18 +1,11 @@
 // @flow
+import React from 'react';
+import {Provider} from 'react-redux';
+import createStore from './store/createStore';
+import Homepage from './container/Homepage';
 
-import React, {Component} from 'react';
-import {View, Text} from 'react-native';
-
-type Props = {};
-
-class App extends Component<Props> {
-  render() {
-    return (
-      <View>
-        <Text>Test</Text>
-      </View>
-    );
-  }
-}
-
-export default App;
+export default () => (
+  <Provider store={createStore}>
+    <Homepage />
+  </Provider>
+);
